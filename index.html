@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <title>Video/Audio</title>
+      <meta charset="UTF-8" />
+      <meta name="format-detection" content="telephone=no" />
+      <link rel="stylesheet" href="css/style.css" />
+      <link rel="shortcut icon" href="favicon.ico" />
+      <!-- <meta name="robots" content="noindex, nofollow"> -->
+      <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   </head>
+   <body>
+      <div class="wrapper">
+<header class="header">
+	<div class="container">
+		<div class="header__row">
+			<!-- 
+				html меню с иконкой бургера
+				<div class="header__menu menu">
+					<div class="menu__icon icon-menu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li><a href="" class="menu__link"></a></li>
+						</ul>
+					</nav>
+				</div>
+			 -->
+		</div>
+	</div>
+</header>
+         <div class="video1">
+            <h1>Привет видео :)</h1>
+
+            <!-- Атрибуты тега "video" -->
+
+            <!-- src, width, height - и так понятно -->
+            <!-- muted - выключает аудиодорожку -->
+            <!-- autoplay - автовоспроизведение -->
+            <!-- controls - добавляет панель управления к видеоролику -->
+            <!-- loop - зацикливает воспроизведение по кругу -->
+            <!-- poster - адрес картинки(обложки) на случай не воспр-я видео -->
+
+            <!-- preload - загрузка видео со страницей -->
+            <!-- Значения атрибута preload: -->
+            <!-- none - не предзагружать -->
+            <!-- metadata - только метаданные (например длина) -->
+            <!-- auto - предзагружать весь файл -->
+            <!-- пустая строка = auto -->
+
+            <!-- Спецификацие реккомендует использовать значение "метадата" -->
+            <!-- Если preload не задать - каждый браузер может присвоить по разному -->
+
+            <!-- В хроме автоплей работает только с мьютид -->
+
+            <video
+               class="video1__item"
+               controls
+               poster="img/forest-poster.jpg"
+               muted
+               autoplay
+               loop
+            >
+               <!-- Вместо атрибута src указываем пути: -->
+               <!-- Сначала грузиться первый файл: -->
+               <source src="videos/forest.webm" type="video/webm" />
+
+               <!-- Если первый не поддерживается, то загрузиться этот -->
+               <source src="videos/forest.mp4" type="video/mp4" />
+            </video>
+         </div>
+
+         <div class="items">
+            <div class="items__container">
+               <div class="items__body">
+                  <div class="item">
+                     <div class="item__video">
+                        <video
+                           controls
+                           poster="img/forest-poster.jpg"
+                           preload="metadata"
+                        >
+                           <source src="videos/forest.webm" type="video/webm" />
+
+                           <source src="videos/forest.mp4" type="video/mp4" />
+                        </video>
+                     </div>
+                     <div class="item__text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. In, cupiditate?
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="item__video">
+                        <video
+                           controls
+                           poster="img/forest-poster.jpg"
+                           preload="metadata"
+                        >
+                           <source src="videos/forest.webm" type="video/webm" />
+
+                           <source src="videos/forest.mp4" type="video/mp4" />
+                        </video>
+                     </div>
+                     <div class="item__text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. In, cupiditate? Lorem ipsum, dolor sit amet
+                        consectetur adipisicing. Corrupti cumque, velit
+                        repellendus ipsam.
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="item__video">
+                        <iframe
+                           src="https://www.youtube.com/embed/g7jDucodUzQ"
+                           title="YouTube video player"
+                           frameborder="0"
+                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                           allowfullscreen
+                        ></iframe>
+                     </div>
+                     <div class="item__text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. In, cupiditate?
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="item__video">
+                        <video
+                           controls
+                           poster="img/forest-poster.jpg"
+                           preload="metadata"
+                        >
+                           <source src="videos/forest.webm" type="video/webm" />
+
+                           <source src="videos/forest.mp4" type="video/mp4" />
+                        </video>
+                     </div>
+                     <div class="item__text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. In, cupiditate? Lorem ipsum, dolor sit amet
+                        consectetur adipisicing elit. In, cupiditate?
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="fullscreen">
+            <div class="fullscreen__body">
+               <div class="fullscreen__title">Фоновое видео</div>
+               <div class="fullscreen__text">Это круто!</div>
+            </div>
+            <video autoplay loop muted preload="auto" class="fullscreen__video">
+               <source src="videos/forest.webm" type="video/webm" />
+
+               <source src="videos/forest.mp4" type="video/mp4" />
+            </video>
+         </div>
+
+         <div class="content">
+            <div class="content__container">
+               <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatibus aut neque asperiores laborum sapiente
+                  reprehenderit officiis, temporibus ea amet rerum assumenda,
+                  maxime labore molestiae quos libero incidunt omnis, fugit
+                  minima!
+               </p>
+               <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatibus aut neque asperiores laborum sapiente
+                  reprehenderit officiis, temporibus ea amet rerum assumenda,
+                  maxime labore molestiae quos libero incidunt omnis, fugit
+                  minima! Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit. Voluptatibus aut neque asperiores laborum sapiente
+                  reprehenderit officiis, temporibus ea amet rerum assumenda,
+                  maxime labore molestiae quos libero incidunt omnis, fugit
+                  minima!
+               </p>
+               <h3>Some music?</h3>
+               <!-- Вставляем аудио -->
+               <audio controls src="audio/Muriel-BobbyRichards.mp3"></audio>
+
+               <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatibus aut neque asperiores laborum sapiente
+                  reprehenderit officiis, temporibus ea amet rerum assumenda,
+                  maxime labore molestiae quos libero incidunt omnis, fugit
+                  minima!
+               </p>
+               <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatibus aut neque asperiores laborum sapiente
+                  reprehenderit officiis, temporibus ea amet rerum assumenda,
+                  maxime labore molestiae quos libero incidunt omnis, fugit
+                  minima!
+               </p>
+               <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatibus aut neque asperiores laborum sapiente
+                  reprehenderit officiis, temporibus ea amet rerum assumenda,
+                  maxime labore molestiae quos libero incidunt omnis, fugit
+                  minima! Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit. Voluptatibus aut neque asperiores laborum sapiente
+                  reprehenderit officiis, temporibus ea amet rerum assumenda,
+                  maxime labore molestiae quos libero incidunt omnis, fugit
+                  minima! Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit. Voluptatibus aut neque asperiores laborum sapiente
+                  reprehenderit officiis, temporibus ea amet rerum assumenda,
+                  maxime labore molestiae quos libero incidunt omnis, fugit
+                  minima!
+               </p>
+               <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatibus aut neque asperiores laborum sapiente
+                  reprehenderit officiis, temporibus ea amet rerum assumenda,
+                  maxime labore molestiae quos libero incidunt omnis, fugit
+                  minima!
+               </p>
+               <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatibus aut neque asperiores laborum sapiente
+                  reprehenderit officiis, temporibus ea amet rerum assumenda,
+                  maxime labore molestiae quos libero incidunt omnis, fugit
+                  minima!
+               </p>
+            </div>
+         </div>
+<footer class="footer">
+	<div class='container'>
+		<div class="footer__row">
+			
+		</div>
+	</div>
+</footer>      </div>
+<div class="popup">
+	<div class="popup-table table">
+		<div class="cell">
+			<div class="popup-content">
+				<div class="popup-close"></div>
+				<div class="popup__title"></div>
+				<div class="popup__txt"></div>
+				<form action="#" class="popup-form form">
+					<div class="form-input">
+						<input autocomplete="off" type="text" name="form[]" data-value="" class="input" />
+					</div>
+					<div class="form-input">
+						<input autocomplete="off" type="text" name="form[]" data-value="" class="input req email" />
+					</div>
+					<div class="form-input">
+						<input autocomplete="off" type="text" name="form[]" data-value="" class="input req" />
+					</div>
+					<div class="form-button">
+						<button type="submit" class="form__btn btn fw"></button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup popup-video">
+	<div class="popup-table table">
+		<div class="cell">
+			<div class="popup-close"></div>
+			<div class="popup-video__value video"></div>
+		</div>
+	</div>
+</div><script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script> -->
+<script src="js/vendors.js"></script>
+<script src="js/main.js"></script>
+<script src="js/custom.js" ></script>
+   </body>
+</html>
+
+<!-- 13:30 -->
